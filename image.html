@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html class="htmlborder">
+<meta http-equiv="content-type" content="text-html; charset=ISO-8859-1">
+
+<head>
+    <style>
+        div.gallery {
+            margin: 5px;
+            /* border: 1px solid #ccc; */
+            float: left;
+            /* width: 120px; */
+        }
+
+       
+        div.imghover img{
+            transition: 1s ease;
+        }
+
+        div.imghover:hover{
+            -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2); 
+  transition: 1s ease;
+        }
+
+        div.gallery img {
+            width: 148px;
+            height: 100px;
+        }
+
+        div.desc {
+            /* padding: 15px; */
+            text-align: center;
+        }
+
+        div.galleryimg {
+            margin: 10px;
+            width: 499px;
+            height: 430px;
+            
+            /* border: 1px solid red; */
+            overflow-y: auto;
+        }
+    </style>
+
+
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+    <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/3.6.95/css/materialdesignicons.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.deli').click(function () {
+                alert("The paragraph was clicked");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="site-identity">
+        <h1 class="inline-heading" style="color:blue;">
+            <img src="image.jpg" class="pacstitle" alt="image1">
+            title &#45; Title</h1>
+    </div>
+    <div class="formcontent" align="left" style="color:white">
+        Patient Details
+        <table class="form" align="left">
+            <th style="text-align: center;"></th>
+            <hr class="HorzontalLine">
+            <tr>
+                <td class="smallColumn textWhite">&nbsp;Patient Name :</td>
+                <td style="width:300px;"><label id="patientname"></label></td>
+                <td align="right" class="smallColumn textWhite">HospNo :</td>
+                <td style="width:220PX;"><label id="HospNo"></label></td>
+                <td class="smallColumn textWhite">Transaction ID :</td>
+                <td colspan="2"><label id="Transaction ID"></label>
+            </tr>
+            <tr>
+                <td align="right" class="smallColumn textWhite">Service Name :</td>
+                <td style="width:300PX;"><label id="Date"></label></td>
+                <td class="smallColumn textWhite">Department :</td>
+                <td style="width:220px;"><label id="Department"></label></td>
+                <td align="right" class="smallColumn textWhite">Date :</td>
+                <td><label id="Service Name"></label></td>
+            </tr>
+
+        </table>
+        <br>
+    </div>
+    <br>
+
+    <div></div>
+    <br>
+
+    <!-- popup -->
+    <div class="popup">
+        <!-- top bar -->
+        <div class="top-bar">
+            <p class="image-name">img1.png</p>
+            <span class="close-btn"></span>
+        </div>
+        <!-- arrows -->
+        <button class="arrow-btn left-arrow"><img src="img/arrow.png" alt=""></button>
+        <button class="arrow-btn right-arrow"><img src="img/arrow.png" alt=""></button>
+        <!-- image -->
+        <img src="img/img1.png" class="large-image" alt="">
+        <!-- image-index -->
+        <h1 class="index">01</h1>
+    </div>
+
+
+    <div class="columnleft" style="border:solid 0px orange;">
+        <table>
+            <img src="img/img1.png" alt="Forest" class="imgprop">
+        </table>
+    </div>
+
+    <!-- Label Select ALL -->
+
+    <div class="lblselectall">
+
+        <input type="checkbox" id="checkall" onchange="javascript:checkAll()">&nbsp;
+        <label id="selectall">SelectAll</label>
+
+    </div>
+
+    <!-- Shooted Images In Right side gallery -->
+
+    <div class="galleryimg">
+        <div class="gallery" >
+            <div class="imghover"><img src="img/img4.png" alt="Cinque Terre" class="image" width="600" height="400"></div>
+            <div class="desc">
+                <input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+
+            <div class="imghover"><img src="img/img4.png" alt="Forest" class="image" width="600" height="400"></div>
+
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+
+            <div class="desc"><input type="checkbox" name="chk"> 
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete" >
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+
+        <div class="gallery">
+            <div class="imghover">
+                <img src="img/img4.png" alt="Northern Lights" class="image" width="600" height="400">
+            </div>
+            <div class="desc"><input type="checkbox" name="chk">
+                <button type="button" class="btn btn-delete">
+                    <span class="mdi mdi-delete mdi-24px"></span>
+                    <span class="mdi mdi-delete-empty mdi-24px"></span>
+                </button></div>
+            <!-- <button type="button" class="btn delete">Delete</div> -->
+        </div>
+    </div>
+
+    <!-- Creation of Buttons - Shoot, Upload, Upload without images, Delete, Download images -->
+
+    <div>
+        <table>
+            <tr>
+                <td>
+                    <input class="btnShoot" type="button" value="Shoot" id="Shootbutton" onclick="javascript:deleteimage()">
+                    <input class="btnUpload" type="button" value="Upload" id="Uploadbutton" onclick="javascript:deleteimage()">
+                </td>
+                 <td colspan="3">
+                    <input class="FnlUploadButton" type="button" value="Upload Without Image" id="save" onclick="javascript:deleteimage()">
+                </td>
+                <td>
+                    <input class="btnDelete" type="button" value="Delete" id="Deletebutton"
+                        onclick="javascript:deleteimage()">
+                    <input class="btnDownload" type="button" value="Download Images" id="Downloadbutton" onclick="javascript:deleteimage()">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<link rel="javascript" type="text/javascript" href="AudioPageScript.js">
+<!-- <div class="footer">
+    <center> 2015 © Christian Medical College </center>
+</div> -->
+
+<script type="text/javascript">
+    function autoScroll() {
+
+        window.scrollBy(0, 500);
+
+    }
+
+    function deleteimage() {
+        var yes = document.querySelectorAll('input[type="checkbox"]:checked');
+        if (yes.length > 0) {
+            alert("Selected")
+        } else {
+            alert("Please select atleast one image to delete")
+        }
+    }
+
+    function save() {
+        alert("Are you sure to upload without images ")
+    }
+
+
+    const images = [...document.querySelectorAll('.image')];
+
+    // popup
+
+    const popup = document.querySelector('.popup');
+    const closeBtn = document.querySelector('.close-btn');
+    const imageName = document.querySelector('.image-name');
+    const largeImage = document.querySelector('.large-image');
+    const imageIndex = document.querySelector('.index');
+    const leftArrow = document.querySelector('.left-arrow');
+    const rightArrow = document.querySelector('.right-arrow');
+
+    let index = 0; // will track our current image;
+
+    images.forEach((item, i) => {
+        item.addEventListener('click', () => {
+            updateImage(i);
+            popup.classList.toggle('active');
+        })
+    })
+
+    const updateImage = (i) => {
+        let path = `img/img${i+1}.png`;
+        largeImage.src = path;
+        imageName.innerHTML = path;
+        imageIndex.innerHTML = `0${i+1}`;
+        index = i;
+    }
+
+    closeBtn.addEventListener('click', () => {
+        popup.classList.toggle('active');
+    })
+
+    leftArrow.addEventListener('click', () => {
+        if (index > 0) {
+            updateImage(index - 1);
+        }
+    })
+
+    rightArrow.addEventListener('click', () => {
+        if (index < images.length - 1) {
+            updateImage(index + 1);
+        }
+    })
+
+    // Select All Button Onchange Event - Check/Uncheck
+
+    function checkAll(ele) 
+    {
+        var checkboxes = document.getElementsByName('chk');
+        if (ele.checked) {
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].type == 'checkbox') 
+                {
+                    checkboxes[i].checked = true;
+                }
+            }
+        } 
+        else 
+        {
+            for (var i = 0; i < checkboxes.length; i++) 
+            {
+                console.log(i)
+                if (checkboxes[i].type == 'checkbox') 
+                {
+                    checkboxes[i].checked = false;
+                }
+            }
+        }
+    }
+</script>
+
+<script src="app.js"></script>
+
+</html>
